@@ -12,7 +12,8 @@ navigator.geolocation.getCurrentPosition((position)=>{
     L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
         attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
     }).addTo(map);
-    marker = L.marker([lon, lat]).addTo(map);
+    let myIcon = L.icon({iconUrl: './imgs/icon-location.svg'});
+    marker = L.marker([lon, lat], {icon: myIcon}).addTo(map);
 });
 fetchAPI();
 btn.addEventListener('click', (e)=>{
