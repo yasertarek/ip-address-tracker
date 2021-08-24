@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Frontend Mentor | IP Address Tracker</title>
+    <link rel="icon" href="imgs/favicon-32x32.png" />
+    <!-- Map Link -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+    integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
+    crossorigin=""/>
+    <!-- Font Link -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="header">
+        <h1 class="heading-main">IP Address Tracker</h1>
+        <form class="form-input">
+            <input type="text" class="ip-input" placeholder="Search for any IP address or domain">
+            <input type="image" src="./imgs/icon-arrow.svg" alt="Submit" class="icon-input">
+        </form>
+    </header>
+    <div class="data-content">
+        <div class="data-content__item">
+            <h2 class="heading-secondary">IP Address</h2>
+            <p class="text-main text-main--ip">192.212.174.101</p>
+        </div>
+        <div class="data-content__item">
+            <h2 class="heading-secondary">Location</h2>
+            <p class="text-main text-main--location">Brooklyn, NY 10001</p>
+        </div>
+        <div class="data-content__item">
+            <h2 class="heading-secondary">Timezone</h2>
+            <p class="text-main text-main--timezone">UTC-05:00</p>
+        </div>
+        <div class="data-content__item">
+            <h2 class="heading-secondary">ISP</h2>
+            <p class="text-main text-main--isp">SpaceX Starlink</p>
+        </div>
+    </div>
+    <div id="mapid"></div>
+    <footer class="footer">
+        <p class="author-copyright">
+            <a href="https://www.frontendmentor.io/" class="link link--1">Frontend Mentor</a> Challenge by <a href="https://www.linkedin.com/in/yasser-tarek-75b781210/" class="link link--2">Yasser Tarek</a>
+        </p>
+        <p class="api-copyright">
+            Map API <a href="https://leafletjs.com/" class="link link--3">Lealeft</a>
+        </p>
+    </footer>
+     <!-- Make sure you put this AFTER Leaflet's CSS -->
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
+    integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
+    crossorigin=""></script>
+    <script src="main.js"></script>
+</body>
+</html>
